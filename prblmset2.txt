@@ -1,0 +1,33 @@
+ 01. Select h.hotel_no,h.name,h.city,r.room_no,r.type,r.price from hotel h inner join room r on h.hotel_no = r.hotel_no; 
+ 
+ 
+ 02. Select h.hotel_no,h.name,h.city,r.room_no,r.type,r.price from hotel h inner join room r on h.hotel_no = r.hotel_no where city  = 'new york'; 
+
+ 
+ 03. Select name,city from guest order by city; 
+ 
+ 
+ 04. Select r.room_no,r.price,h.name,h.city from room r inner join hotel h on h.hotel_no = r.hotel_no where r.type = 'n' order by r.price; 
+ 
+
+ 05. Select city,count(*) hotel_count from hotel group by city; 
+ 
+ 
+ 06. Select name,city from guest group by city; 
+ 
+ 
+ 07. Select avg(price) from room; 
+ 
+ 
+ 08. Select h.name,r.room_no,r.type from room r inner join hotel h on r.hotel_no = h.hotel_no; 
+
+ 
+ 09. Select count(*) from booking where b.date_from like '%SEP%;
+ 
+ 
+ 10. Select h.name,b.date_from,b.room_no from hotel h inner join booking b on b.hotel_no = h.hotel_no where h.city = 'new york'; 
+ 
+
+ 
+ 
+ 
