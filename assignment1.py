@@ -5,4 +5,5 @@ di=dict(re)
 st=str(di)
 #print(di)
 f=open("ram.txt","w")
-f.write(st)
+f.write(st
+        )
