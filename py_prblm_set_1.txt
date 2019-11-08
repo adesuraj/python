@@ -1,0 +1,219 @@
+1:For the below binary number , count the Occurrence of sequence '101'
+10101010100111101
+
+
+# import re
+# a='10110010111100101'
+# s=re.findall('101',a)
+# print len(s)
+
+
+==============================================================================================================
+2: For the below matrix , calculate both the diagonal and print the value.(Hint: consider each row as a list object)
+
+ 
+
+3 8 7
+
+8 7 9
+
+1 6 0
+
+
+
+
+def diag_sum(mat, n):
+    d1=0
+    d2=0
+    for i in range(0,n):
+        for j in range(0,n):
+            if(i==j):
+                d1=d1+mat[i][j]
+
+            if((i+j==n-1)):
+               d2=d2+mat[i][j]
+
+    print(d1)
+    print(d2)
+
+a = [[3,8,7],[8,7,9],[1,6,0]]
+printDiagonal(a,3)
+
+ 
+
+ 
+==============================================================================================================
+3 :Rotate the above matrix by 90 degree anticlockwise
+
+hint :convert row to column and column to row
+
+m = [[3,8,7],[8,7,9],[1,6,0]]
+new_matrix = [[m[j][i] for j in range(len(m))] for i in range(len(m[0])-1,-1,-1)]
+print(new_matrix)
+ 
+
+ 
+==============================================================================================================
+4: The string abcabcabc........ goes till 1111 . print the number of Occurrence of 'ca'
+s='abc'
+s1=s*370+'a'
+print len(s1)
+print s1.count('ca')
+
+
+ 
+==============================================================================================================
+5: Convert the string as below.
+
+input : abcDEwQ
+
+output: ABCdeWq
+
+
+# s='abcDEwQ'
+#
+# class A:
+#
+#     def swap(self,st):
+#         s1 = ''
+#         for i in st:
+#             if i.islower():
+#                 s1+=i.upper()
+#             else:
+#                 s1+=i.lower()
+#         return s1
+# obj=A()
+# num=raw_input("enter string:")
+# print obj.swap(num)
+ 
+
+ 
+==============================================================================================================
+6: Find the ordered longest alphabetical sequence.
+abccdefabcdefae
+
+
+str1=input("enter a string")
+a=str1[0]
+b=str1[0]
+for i in range(len(str1)-1):
+    if ord(str1[i])==ord(str1[i+1]):
+        a+=str1[i+1]
+        if len(a)>len(b):
+            b=a
+    else:
+        a=str1[i+1]
+print(b)
+
+ 
+==============================================================================================================
+7:Find the sum of multiples of 3 and 5 between 1 to 1000
+
+# def multi():
+#     s=0
+#     for i in range(1,1000):
+#         if i%3==0 or i%5==0:
+#             s+=i
+#     print(s)
+#
+# multi()
+
+ 
+
+ 
+==============================================================================================================
+8: Display the phone number as below and also print the last 4 digit in ascending order
+
+input : 9993452133
+
+output :xxx-xxx-xxxx
+
+# num='9182752247'
+# s1=''
+# n=len(num)/3
+# j=0
+# for i in range(n-1):
+#     s1+=num[j:n]+'-'
+#     j=n
+#     n+=j
+# s2=sorted(num[-4:])
+# for i in s2:
+#     s1+=''.join(i)
+# print s1
+
+
+ 
+
+ 
+==============================================================================================================
+9: "There are 26 alphabets in English out of which 5 are vowels and 21 are consonants"
+
+Count the sum of numbers in the above statement using regular expression
+
+# import re
+# su=0
+# s='There are 26 alphabets in English out of which 5 are vowels and 21 are consonants'
+# s1=re.findall('\d+',s)
+# for i in s1:
+#     su+=int(i)
+# print su
+
+ 
+==============================================================================================================
+
+10.anagram : sample inputs : tear, rate ; Find if these words are anagram or not. Program should accept two inputs from user.
+
+
+# s1='Teare'
+# s2='rate'
+# if sorted(s1.lower())==sorted(s2.lower()):
+#     print "anagram"
+# else:
+#     print 'not'
+ 
+==============================================================================================================
+11;With a given integral number n, change the program to generate a dictionary that contains (i, cube of i) such that is an integral number between 1 and n (both included).
+
+and then the program should print the dictionary.
+
+Suppose the following input is supplied to the program:
+
+7
+
+Then, the output should be:
+
+{1: 1, 2: 8, 3: 27, 4: 64, 5: 125, 6: 216, 7: 373}
+
+Take the input from the user via console.
+
+
+# n=int(input("enter a num:"))
+# num=range(1,n)
+# di={}.fromkeys(num,0)
+# for i in range(1,len(di)+1):
+#     di[i]=i**3
+# print di
+
+ 
+
+ 
+==============================================================================================================
+12: find if the below numbers are Armstrong number
+
+# num=int(input('enter no:'))
+# as_num=num
+# su=0
+# while(num!=0):
+#     re=num%10
+#     su+=re**3
+#     num/=10
+# if as_num==su:
+#     print "is a armstrong no."
+# else:
+#     print "is not a armstrong no."
+
+a: 153
+
+b:1634
+
+c: 876
