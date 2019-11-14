@@ -1,6 +1,6 @@
 """unit test caseModule"""
 import unittest
-import factorial_of_num
+from src.code import factorial_of_num
 
 
 class FactorialTest(unittest.TestCase):
@@ -10,12 +10,14 @@ class FactorialTest(unittest.TestCase):
     def test_valid_number1(self):
         """test the valid number"""
         result = factorial_of_num.factorial_number(4)
+
         self.assertEqual(result, 24)
     # test_for_number_0
 
     def test_valid_number2(self):
         """test the valid number 0"""
         result = factorial_of_num.factorial_number(0)
+
         self.assertEqual(result, 1)
     # test_for_number_1
 
@@ -27,6 +29,7 @@ class FactorialTest(unittest.TestCase):
 
     def test_negative_number(self):
         """test the negative number"""
+
         self.assertRaises(ValueError)
 
     # test_for_float
@@ -37,3 +40,4 @@ class FactorialTest(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
+
